@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  height: 100svh;
+  background: linear-gradient(90deg, #395492, #0099c0, #3dd5a8);
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-template-rows: repeat(20, auto);
+  padding: 0.6vh;
+  gap: 0.3vh;
+  border-radius: 0.6vh;
+  background-color: rgba(1, 8, 89, 0.5);
+}
+
+.grid>div {
+  --cell-size: min(4.5vh, 7.5vw);
+  height: var(--cell-size);
+  width: var(--cell-size);
+  border-radius: 0.3vh;
+  background-color: rgba(126, 150, 221, 0.2);
+}
+
+.grid>div.ghost {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.grid>div.I {
+  background-color: #6be1ec;
+}
+
+.grid>div.J {
+  background-color: #5eb0f3;
+}
+
+.grid>div.L {
+  background-color: #f2c35b;
+}
+
+.grid>div.O {
+  background-color: #f7e562;
+}
+
+.grid>div.S {
+  background-color: #7be17b;
+}
+
+.grid>div.Z {
+  background-color: #de5c6b;
+}
+
+.grid>div.T {
+  background-color: #b276f3;
+}
+
+.grid>div.I,
+.grid>div.J,
+.grid>div.L,
+.grid>div.O,
+.grid>div.S,
+.grid>div.T,
+.grid>div.Z,
+.grid>div.ghost,
+.grid>div.sad {
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 2px rgba(1, 8, 89, 0.2);
+}
+
+.grid>div.hide {
+  animation: hide 0.5s;
+}
+
+@keyframes hide {
+  0% {
+    transform: scale(0.8) rotate(30deg);
+  }
+
+  45% {
+    transform: scale(0.8) rotate(-30deg);
+  }
+
+  90% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.grid>div.sad {
+  background-color: #f2c35b;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
