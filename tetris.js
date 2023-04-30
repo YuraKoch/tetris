@@ -30,7 +30,7 @@ export class Tetris {
     const matrix = TETROMINOES[name];
 
     const column = PLAYFIELD_COLUMNS / 2 - Math.floor(matrix.length / 2);
-    const row = name === 'I' ? -1 : -2;
+    const row = -2;
 
     this.tetromino = {
       name,
