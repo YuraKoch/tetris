@@ -181,7 +181,7 @@ function drawGhostTetromino() {
 function gameOver() {
   stopLoop();
   document.removeEventListener('keydown', onKeydown);
-  hammer.off('panstart panleft panright pandown swipedownvtap');
+  hammer.off('panstart panleft panright pandown swipedown tap');
   gameOverAnimation();
 }
 
@@ -194,7 +194,6 @@ function gameOverAnimation() {
 
   setTimeout(drawSad, filledCells.length * 10 + 1000);
 }
-
 
 function drawSad() {
   const TOP_OFFSET = 5;
