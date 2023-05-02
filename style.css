@@ -79,6 +79,11 @@ body {
     inset -2px -2px 2px rgba(1, 8, 89, 0.2);
 }
 
+.grid>div.sad {
+  background-color: #f2c35b;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
 .grid>div.hide {
   animation: hide 0.5s;
 }
@@ -95,9 +100,4 @@ body {
   90% {
     transform: scale(1) rotate(0);
   }
-}
-
-.grid>div.sad {
-  background-color: #f2c35b;
-  transition: background-color 0.5s, box-shadow 0.5s;
 }
